@@ -26,7 +26,7 @@ app.get('/', async (req, res) => {
     res.render('index', {
         books,
         hoTen: "Nguyễn Quang Nhân",
-        mssv: "23NS" + process.env.MSSV_CUOI,
+        mssv: "23IT" + process.env.MSSV_CUOI,
         vat: Number(process.env.CHU_SO_CUOI) + 6
     });
 });
