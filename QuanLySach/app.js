@@ -1,3 +1,6 @@
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+
 const express = require('express');
 const session = require('express-session');
 const { MongoStore } = require('connect-mongo');
