@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quản lý Sách</title>
+</head>
+
+<body>
+    <h1>Thêm Sách Mới</h1>
+    <form action="/add" method="POST">
+        <input type="text" name="maSP" placeholder="Mã SP (Bắt đầu bằng 3 số cuối MSSV)" required>
+        <input type="text" name="tenSach" placeholder="Tên Sách" required>
+        <input type="number" name="giaGoc" placeholder="Giá gốc" required>
+        <button type="submit">Thêm xuống Cloud</button>
+    </form>
+
+    <h2>Danh sách hiển thị</h2>
+    <ul>
+        {{#each books}}
+        <li>{{this.maSP}} - {{this.tenSach}} - Giá sau thuế: {{this.giaSauThue}}</li>
+        {{/each}}
+    </ul>
+
+    <hr>
+    <!-- Footer hiển thị thông tin cá nhân hóa -->
+    <footer>
+        Họ tên: {{hoTen}} | MSSV: {{mssv}} | Mức VAT áp dụng: {{vat}}%
+    </footer>
+</body>
+
+</html>
